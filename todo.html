@@ -3,18 +3,24 @@
 <head>
 	<title>TODO-App</title>
 	<link rel="stylesheet" type="text/css" href="todo.css">
-	<script src="todo.js"></script>
+	
 </head>
-<div class="box">
-	<div id="mi-box">
-		<div id="banner">
-		<h2>TODO APP</h2></div>
+<body>
+	<div class="box">
+		<div id="mi-box">
+			<div id="banner">
+				<h2>TODO APP</h2>
+			</div>
+		</div>
 		<div class="input-text">
-	<input type="text" id ='inputtext'><button id ='btn'>Add</button>
-</div>
+			<input type="text" placeholder="Text Here..."  id ='inputtext' onclick="abc()" />
+			<button id ='btn'>Add </button> 
+		</div>
 
-<div id="todocontainer"></div>
-</div>
-</div>
-
+		<div id="todocontainer">
+			
+		</div>
+	</div>
+	<script src="todo.js"></script>
+</body>
 </html>

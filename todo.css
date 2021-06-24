@@ -1,0 +1,51 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+html,body{
+	margin: 50px ;
+	background: pink;
+}
+.box{
+	border-radius: 50px;
+	width: 25%;
+    margin:  0 auto;
+	height: 450px;
+	background-color: white;
+	box-shadow: 10px 10px 30px black;
+	
+}
+#banner{ 
+
+text-align: center;
+	color: white;
+background-color: black;
+
+}
+
+#mi-box{
+	padding: 50px;
+
+}
+.input-text{
+	margin: 20px 0px;
+}
+#inputtext{padding: 5px;
+	border-radius: 30px;
+	width: 140px;
+
+}
+#btn{
+	background-color: black;
+	color: white;
+	border-radius: 50px;
+width: 30px;
+height: 30px;
+	cursor: pointer;
+
+	
+}
+#btn:hover{
+	background-color: white;
+	color: black;
+}

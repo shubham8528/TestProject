@@ -9,7 +9,7 @@ addbtn.addEventListener('click', function(){
 	    addinputtext.value="";
 });
 
-
+//  INPUTFIELD BACKGROUND COLOR  //
 function abc(){
 	document.getElementById('inputtext').style.background='orange';
 }          

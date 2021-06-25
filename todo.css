@@ -1,75 +1,88 @@
 *{
-	margin: 0;
-	padding: 0;
-}
-html,body{
-	margin: 50px;
-	background: lightgoldenrodyellow;
-}
-.box{
-	border-radius: 50px;
-	width: 25%;
-    margin:  0 auto;
-	height: 450px;
-	background-color: white;
-	box-shadow: 10px 10px 30px black;
-	overflow: hidden;
-	animation-name: shadow;
-	animation-duration: 5s;
-	animation-direction: alternate;
-	animation-iteration-count: infinite;
+   margin: 0;
+   padding: 0;
+  }
 
-}
+html,body{
+	        margin-top: 50px;
+	          background: lightgoldenrodyellow;
+          }
+
+.box{
+     	border-radius: 50px;
+	   width: 300px;
+	   height: 450px;
+      margin: 0 auto;
+     	background-color: white;
+     	box-shadow: 10px 10px 30px black;
+     	overflow: hidden;
+     	animation-name: shadow;
+     	animation-duration: 5s;
+      animation-direction: alternate;
+     	animation-iteration-count: infinite;
+     }
+
+@media screen and (max-width: 1000px){
+      .box{
+         background-color: red;
+           }
+     }
+     
+   
+
 @keyFrames shadow{
-0%{ box-shadow: 10px 10px 50px yellow;}
-20%{box-shadow: 10px 10px 50px blue;}
-40%{box-shadow: 10px 10px 50px orange;}
-60%{box-shadow: 10px 10px 50px green;}
-80%{box-shadow: 10px 10px 50px gray;}
-100%{box-shadow: 10px 10px 50px red;}
-}
+                   0%{ box-shadow: 10px 10px 50px yellow;}
+                   20%{box-shadow: 10px 10px 50px blue;}
+                   40%{box-shadow: 10px 10px 50px orange;}
+                   60%{box-shadow: 10px 10px 50px green;}
+                   80%{box-shadow: 10px 10px 50px gray;}
+                   100%{box-shadow: 10px 10px 50px red;}
+                  }
+              
 
 #banner{ 
-padding-top: 20px;
-text-align: center;
-width: 100%;
-background-color: black;
+         padding-top: 20px;
+         text-align: center;
+         width: 100%;
+         background-color: black;
+        }
 
-}
+
 #banner h2{
-	word-spacing: 10px;
-	color: white;
-padding: 10px;
-}
+              word-spacing: 10px;
+	           color: white;
+              padding: 10px;
+             }
+
+ 
 
 .input-text{
-	margin: 20px 0px;
-}
-#inputtext{margin-left: 55px;
-	padding: 5px;
-	border-radius: 30px;
-	width: 140px;
-}
+           	 margin: 20px 0px;
+            }
+
+#inputtext{
+	          margin-left: 55px;
+	          padding: 5px;
+       	    border-radius: 30px;
+	          width: 140px;
+           }
 
 #btn{
-	background-color: black;
-	color: white;
-	padding: 5px;
-	
-}
+   	  background-color: black;
+	    color: white;
+	    padding: 5px;	
+     }
+
 #btn:hover{
-	background-color: white;
-	color: black;
-}
+    	      background-color: white;
+	          color: black;
+           }
 
 #todocontainer{
-	background-color: orange;
-
-	height: 50%;
-	padding: 20px 40px;
-	color: white;
-	font-size: 20px;
-}
-
-
+	              background-color: orange;
+     	          height: 50%;
+	              padding: 20px 40px;
+	              color: white;
+      	        font-size: 20px;
+               }
 

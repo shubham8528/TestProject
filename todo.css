@@ -4,7 +4,7 @@
 }
 html,body{
 	margin: 50px;
-	background: pink;
+	background: lightgoldenrodyellow;
 }
 .box{
 	border-radius: 50px;
@@ -13,9 +13,22 @@ html,body{
 	height: 450px;
 	background-color: white;
 	box-shadow: 10px 10px 30px black;
-
 	overflow: hidden;
+	animation-name: shadow;
+	animation-duration: 5s;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+
 }
+@keyFrames shadow{
+0%{ box-shadow: 10px 10px 50px yellow;}
+20%{box-shadow: 10px 10px 50px blue;}
+40%{box-shadow: 10px 10px 50px orange;}
+60%{box-shadow: 10px 10px 50px green;}
+80%{box-shadow: 10px 10px 50px gray;}
+100%{box-shadow: 10px 10px 50px red;}
+}
+
 #banner{ 
 padding-top: 20px;
 text-align: center;
@@ -24,14 +37,11 @@ background-color: black;
 
 }
 #banner h2{
+	word-spacing: 10px;
 	color: white;
 padding: 10px;
 }
 
-#mi-box{
-
-
-}
 .input-text{
 	margin: 20px 0px;
 }
@@ -39,9 +49,8 @@ padding: 10px;
 	padding: 5px;
 	border-radius: 30px;
 	width: 140px;
-
-
 }
+
 #btn{
 	background-color: black;
 	color: white;
@@ -55,8 +64,12 @@ padding: 10px;
 
 #todocontainer{
 	background-color: orange;
+
 	height: 50%;
 	padding: 20px 40px;
 	color: white;
 	font-size: 20px;
 }
+
+
+

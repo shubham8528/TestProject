@@ -1,27 +1,33 @@
-<!DOCTYPE html>
+<!DOCTYPE html >
 <html>
 <head>
 	<title>TODO-App</title>
 	<link rel="stylesheet" type="text/css" href="todo.css">
-	
+		<meta charset="UTF-8">
+		 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
 <body>
-	<!-- TO DO Box !-->
+<div class="boxs">
+	<!-- TODO Box !-->
 	<div class="box">
 		    <!-- TODO APP Name!-->
 			<div id="banner">
 				<h2>TODO APP</h2>
 			</div>
-		<!-- INPUt TEXT !-->
+		<!-- INPUt TEXT AND BUTTON !-->
 		<div class="input-text">
-			<input type="text" placeholder="Text Here..."  id ='inputtext' onclick="abc()" onblur="xyz()" />
-			<button id ='btn'>Add </button> 
+			<input type="text" placeholder="Text Here..."  id ='inputtext'   />
+			<button id ='btn' onclick="abc()">Add </button> 
 		</div>
         <!--ADD TEXT !-->
-		<div id="todocontainer">
-	
+		<div id="todocontainer" class="custom-counter" >
+			<ul class="myList" >
+			</ul>
+			
 	    </div>
 	</div>
+</div>
 	<script src="todo.js"></script>
 </body>
 </html>

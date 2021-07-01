@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title >TODO-App</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.js" integrity="sha512-otOZr2EcknK9a5aa3BbMR9XOjYKtxxscwyRHN6zmdXuRfJ5uApkHB7cz1laWk2g8RKLzV9qv/fl3RPwfCuoxHQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<link rel="stylesheet" type="text/css" href="todo.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,8 +22,8 @@
 			</div>
 		<!-- INPUt TEXT AND BUTTON !-->
 		<div class="input-text">
-			<input type="text" placeholder="Text Here..."  id ='inputtext'   />
-			<button id ='btn' onclick="abc()">Add </button> 
+			<input type="text" placeholder="Text Here..."  id ='inputtext' />
+			<button id ='btn' onclick="abc()" onblur="xyz()">Add</button> 
 		</div>
         <!--ADD TEXT !-->
 		<div id="todocontainer" class="custom-counter" >

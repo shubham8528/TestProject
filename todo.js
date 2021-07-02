@@ -36,41 +36,68 @@ addbtn.addEventListener("click", function () {
 
   var text = document.createElement("li");
   text.innerText = addinputtext.value;
+ 
   text.style = "display:inline-block; padding-right:20px;";
 
-
-
   addcontainer[0].append(text,x,y);
-  console.log(addcontainer);
+
   addinputtext.value = "";
+
+
+  fetch("https://60dadebc801dcb0017290c2f.mockapi.io/todos",{
+          method: "POST",
+          body:JSON.stringify({
+                                title:text.innerText
+                              }),
+  headers:{ 
+           "content-type": "application/json; charset=UTF-8"}
+           })
+
+   .then(function(cahnge) {  
+                             return cahnge.json();
+                             })
+   .then(function (result){
+                           console.log(result)
+                             })
+
+
+
 });
 
-function getTodos(){
-  fetch("https://60dadebc801dcb0017290c2f.mockapi.io/todos",{
-    method: "get",
-    headers: { "content-type": "application/json"},
-  })
-    .then(function (cahnge) {
-      return cahnge.json();
-    })
-    .then(function (result){
-      console.log(result);
-      result.forEach(function(r) {
-        var x = document.createElement("INPUT");
-        var y = document.createElement("BR");
-        x.setAttribute("type", "checkbox");
 
-        var text = document.createElement("li");
-        text.innerText = r.text;
-        text.style = "display:inline-block; padding-right:20px;";
 
-        addcontainer[0].append(text,x,y);
-      });
-    })                                        
-    .catch(function (error) {
-      console.log("Something Error here....", error);
-    });
-}
+
+
+// function getTodos(){
+//   fetch("https://60dadebc801dcb0017290c2f.mockapi.io/todos",{
+//           method: "POST",
+//           body:JSON.stringify({
+//                                 title:text.innerText
+//                               }),
+//   headers:{ 
+//            "content-type": "application/json; charset=UTF-8"}
+//            })
+
+//    .then(function(cahnge) {  
+//                              return cahnge.json();
+//                              })
+//    .then(function (result){
+//       result.forEach(function(r) {
+//         var x = document.createElement("INPUT");
+//         var y = document.createElement("BR"); 
+//         x.setAttribute("type", "checkbox");
+
+//         var text = document.createElement("li");
+//         text.innerText = r.text;
+//         text.style = "display:inline-block; padding-right:20px;";
+
+//         addcontainer[0].append(text,x,y);
+//       });
+//     })                                        
+//     .catch(function (error) {
+//       console.log("Something Error here....", error);
+//     });
+// }
 
 //  INPUTFIELD BACKGROUND COLOR  //
 function abc() {

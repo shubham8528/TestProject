@@ -6,9 +6,10 @@
 html{
      margin: 0;
    padding: 0;
+   
 }
 body{
-background-color: lightcyan;
+
 }
 
 
@@ -18,11 +19,13 @@ background-color: lightcyan;
 }
 
 .box {
+     border: 2px solid white;
   border-radius: 50px;
   width: 300px;
   height: 480px;
   margin: 0 auto;
   background-color: white;
+  
   box-shadow: 10px 10px 30px black;
   overflow: hidden;
   animation-name: shadow;

@@ -20,9 +20,6 @@
   
 // })
 
-
-
-
 var addinputtext = document.getElementById("inputtext");
 var addbtn = document.getElementById("btn");
 var addcontainer = document
@@ -43,14 +40,11 @@ addbtn.addEventListener("click", function () {
 
   addinputtext.value = "";
 
-
   fetch("https://60dadebc801dcb0017290c2f.mockapi.io/todos",{
       method: "post",
-      body:JSON.stringify({title:text.innerText
+      body:JSON.stringify({text:text.innerText
       }),
-     
-
-      headers:{ 
+     headers:{ 
         "content-type": "application/json; charset=UTF-8"}
         })
 
@@ -60,8 +54,11 @@ addbtn.addEventListener("click", function () {
    .then(function (result){
                            console.log(result)
                              })
+
 });
 
+
+// WHEN RELOAD THE PAGE THEN CALL THIS FUNCTION 
 
 function getTodos(){
   fetch("https://60dadebc801dcb0017290c2f.mockapi.io/todos",{
@@ -69,9 +66,12 @@ function getTodos(){
           // body:JSON.stringify({
           //                       title:text.innerText
           //                     }),
-  headers:{ 
-           "content-type": "application/json; charset=UTF-8"}
-           })
+  // headers:{ 
+  //          "content-type": "application/json; charset=UTF-8"}
+  headers:{
+    'content-type':'application/x-www-form-urlencoded'
+  }
+               })
 
    .then(function(cahnge) {  
                              return cahnge.json();
@@ -103,4 +103,4 @@ function xyz() {
 }
 document.addEventListener('DOMContentLoaded', function () {
       getTodos() 
-}, false);
+}, false);     

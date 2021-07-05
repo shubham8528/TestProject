@@ -99,9 +99,20 @@ body{
   
   background-color:maroon;
   height: 50%;
-  padding: 20px 40px;
+  padding: 20px 10px;
   color: white;
   font-size: 20px;
+  overflow: auto;
+}
+.myList{
+
+
+
+}
+.myList li{
+  display: flex;
+  justify-content:space-between;
+  
 }
 
 #container {

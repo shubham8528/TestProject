@@ -1,106 +1,44 @@
-// var addinputtext=document.getElementById('inputtext');
-// var addbtn=document.getElementById('btn');
-// var addtodocontainer=document.getElementById('todocontainer') ;
-
-// addbtn.addEventListener('click',function(){
-// var check=document.createElement('p');
-// var brack=document.createElement('br')
-
-// check.innerHTML='<i>&#x2713;</i>';
-
-
-
-
-//   var element=document.createElement('li');
-//   element.style = "display:inline-block; padding-right:20px;";
-//   element.innerText=addinputtext.value;
-//   addtodocontainer.appendChild(element);
-//   addtodocontainer.appendChild(check);
-//   addtodocontainer.appendChild(brack);
-  
-// })
-
-var addinputtext = document.getElementById("inputtext");
-var addbtn = document.getElementById("btn");
-var addcontainer = document
-  .getElementById("todocontainer")
-  .querySelectorAll(".myList");
-
-addbtn.addEventListener("click", function () {
-  var x = document.createElement("INPUT");
-  var y = document.createElement("BR");
-   x.setAttribute("type", "checkbox");
-
-  var text = document.createElement("li");
-  text.innerText = addinputtext.value;
+var addinput=document.querySelector('#inputtext');
+var addbtn=document.querySelector('#btn')
+var addtodocontainer=document.querySelector('#todoconatoiner');
  
-  text.style = "display:inline-block; padding-right:20px;";
 
-  addcontainer[0].append(text,x,y);
+ // Even Call 
+ addbtn.addEventListener('click', addTodo);
 
-  addinputtext.value = "";
+ function addTodo(even){
+even.preventDefault()
 
-  fetch("https://60dadebc801dcb0017290c2f.mockapi.io/todos",{
-      method: "post",
-      body:JSON.stringify({text:text.innerText
-      }),
-     headers:{ 
-        "content-type": "application/json; charset=UTF-8"}
-        })
-
-   .then(function(cahnge) {  
-                             return cahnge.json();
-                             })
-   .then(function (result){
-                           console.log(result)
-                             })
-
-});
+// Div Create
+var todoDiv= document.createElement('div');
+todoDiv.classList.add('todo-here')
 
 
-// WHEN RELOAD THE PAGE THEN CALL THIS FUNCTION 
+// list Create
+var newTodo= document.createElement('li');
+newTodo.innerText=addinput.value;
+newTodo.classList.add('todoList');
+todoDiv.appendChild(newTodo);
 
-function getTodos(){
-  fetch("https://60dadebc801dcb0017290c2f.mockapi.io/todos",{
-          method: "get",
-          // body:JSON.stringify({
-          //                       title:text.innerText
-          //                     }),
-  // headers:{ 
-  //          "content-type": "application/json; charset=UTF-8"}
-  headers:{
-    'content-type':'application/x-www-form-urlencoded'
-  }
-               })
+// Check Button
+var todoBtn1= document.createElement('button');
+todoBtn1.innerHTML= '<input type="checkbox" name="">';
+todoBtn1.style='background-Color:gray; border:none';
 
-   .then(function(cahnge) {  
-                             return cahnge.json();
-                             })
-   .then(function (result){
-      result.forEach(function(r) {
-        var x = document.createElement("INPUT");
-        var y = document.createElement("BR"); 
-        x.setAttribute("type", "checkbox");
+todoBtn1.classList.add('check-Btn');
+todoDiv.appendChild(todoBtn1);
 
-        var text = document.createElement("li");
-        text.innerText = r.text;
-        text.style = "display:inline-block; padding-right:20px;";
 
-        addcontainer[0].append(text,x,y);
-      });
-    })                                        
-    .catch(function (error) {
-      console.log("Something Error here....", error);
-    });
-}
+// Delete Button
+var todoBtn2= document.createElement('button');
+todoBtn2.innerHTML='<i class="fa fa-trash-o" style="font-size:20px"></i>';
+todoBtn2.classList.add('delet-Btn')
+todoBtn2.style='background-Color:gray; border:none';
+todoDiv.appendChild(todoBtn2);
 
-//  INPUTFIELD BACKGROUND COLOR  //
-function abc() {
-  document.getElementById("inputtext").style.background = "orange";
-}
-function xyz() {
-  document.getElementById("inputtext").style.background = "";
-}
-document.addEventListener('DOMContentLoaded', function () {
-      getTodos() 
-}, false);     
+// Show TODO list append
+
+todocontainer.appendChild(todoDiv);
+
+ };
+

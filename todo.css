@@ -1,130 +1,121 @@
-
-html{
-    margin: 0;
+html {
+  margin: 0;
   padding: 0;
 }
-body{
-background-color: rgb(37, 38, 106);
+body {
+  background-color: rgb(37, 38, 106);
 }
 
-
 .boxs {
-
- margin-top: 50px;
+  margin-top: 50px;
 }
 
 .box {
-  
- border-radius: 50px;
- width: 300px;
- height: 470px;
- margin: 0 auto;
- background-color:gray;
- box-shadow: 10px 10px 30px black;
- overflow: hidden;
- animation-name: shadow;
-      animation-duration: 5s;
-     animation-direction: alternate;
-      animation-iteration-count: infinite;
+  border-radius: 50px;
+  width: 300px;
+  height: 470px;
+  margin: 0 auto;
+  background-color: gray;
+  box-shadow: 10px 10px 30px black;
+  overflow: hidden;
+  animation-name: shadow;
+  animation-duration: 5s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
 }
 
 @keyframes shadow {
- 0% {
-   box-shadow: 10px 10px 50px yellow;
- }
- 20% {
-   box-shadow: 10px 10px 50px blue;
- }
- 40% {
-   box-shadow: 10px 10px 50px orange;
- }
- 60% {
-   box-shadow: 10px 10px 50px green;
- }
- 80% {
-   box-shadow: 10px 10px 50px gray;
- }
- 100% {
-   box-shadow: 10px 10px 50px red;
- }
+  0% {
+    box-shadow: 10px 10px 50px yellow;
+  }
+  20% {
+    box-shadow: 10px 10px 50px blue;
+  }
+  40% {
+    box-shadow: 10px 10px 50px orange;
+  }
+  60% {
+    box-shadow: 10px 10px 50px green;
+  }
+  80% {
+    box-shadow: 10px 10px 50px gray;
+  }
+  100% {
+    box-shadow: 10px 10px 50px red;
+  }
 }
 
 #banner {
- padding-top: 10px;
- text-align: center;
- width: 100%;
-background-color:black;
+  padding-top: 10px;
+  text-align: center;
+  width: 100%;
+  background-color: black;
 }
 
 #banner h2 {
-
- word-spacing: 10px;
- color: white;
-padding-bottom: 20px;
+  word-spacing: 10px;
+  color: white;
+  padding-bottom: 20px;
 }
 
 .input-text {
-justify-content: center;
-display: flex;
+  justify-content: center;
+  display: flex;
 }
 
 #inputtext {
-border: none;
-
-padding: 8px;
-
-}
-
-#btn {
- border: none;
-
- 
- background-color: white;
-
-}
-#btn span{
+  border: none;
 
   padding: 8px;
 }
 
+#btn {
+  border: none;
+
+  background-color: white;
+}
+#btn span {
+  padding: 8px;
+}
+
 #btn:hover {
-background-color: rgb(37, 38, 106);
- color: white;
+  background-color: rgb(37, 38, 106);
+  color: white;
 }
 
 #todocontainer {
- margin: 10px 0px;
- overflow: auto;
- height: 60%; 
- color: white;
- font-size: 20px;
+  margin: 10px 0px;
+  overflow: auto;
+  height: 60%;
 
+  color: white;
+  font-size: 20px;
 }
-.todo-list{
-padding: 5px 30px;
-
+.todo-list {
+  padding: 5px 30px;
 }
-.todo-here{border: 2px solid black ;
- margin: 10px 30px;
- padding: 4px;
+.todo-here {
+  border: 2px solid black;
+  margin: 10px 30px;
+  padding: 4px;
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   margin-bottom: 5px;
 }
-.todoList{
- list-style: none;
- flex: 1;
+.todoList {
+  list-style: none;
+  flex: 1;
+  word-break: break-all;
 }
 
-
 #container {
- display: flex;
- flex-direction: column;
- align-items: center;
- position: relative;
- top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: 100px;
 }
 
 #directions {
- color: green;
+  color: green;
 }

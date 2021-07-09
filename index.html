@@ -21,8 +21,11 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <script src="https://kit.fontawesome.com/19e9eb7007.js" crossorigin="anonymous"></script>
   </head>
   <body>
+    <div id="toast"><div id="img"><i class="far fa-thumbs-up"></i></div><div id="desc">Messages added Sucessully</div></div>
+    <div id="toastdelete"><div id="img"><i class="far fa-trash-alt"></i></div><div id="desc">Messages Deleted Sucessully</div></div>
     <div class="boxs">
       <!-- TODO Box !-->
       <div class="box">
@@ -33,11 +36,11 @@
         <!-- INPUt TEXT AND BUTTON !-->
         <form class="input-text">
           <input type="text" placeholder="Text Here..." id="inputtext" />
-          <button id="btn"><span>Add</span></button>
+          <button id="btn" ><span>Add</span></button>
         </form>
         <!--ADD TEXT !-->
         <div id="todocontainer" class="custom-counter">
-          <ul></ul>
+          <ul class="todoList"></ul>
         </div>
 
         <p

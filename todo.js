@@ -20,18 +20,18 @@ function addTodo(even) {
   addinput.value = "";
 
   // Check Button
-  var todoBtn1 = document.createElement("button");
+  var todoBtn1 = document.createElement("span");
   todoBtn1.innerHTML = '<input type="checkbox" name="">';
-  todoBtn1.style = "background-Color:gray; border:none";
+  todoBtn1.style = " border:none";
   todoBtn1.classList.add("check-Btn");
   todoDiv.appendChild(todoBtn1);
 
   // Delete Button
-  var todoBtn2 = document.createElement("button");
+  var todoBtn2 = document.createElement("span");
   todoBtn2.setAttribute("onclick", "abc(event);");
   todoBtn2.innerHTML = '<i class="fa fa-trash-o" style="font-size:20px"></i>';
   todoBtn2.classList.add("deletBtn");
-  todoBtn2.style = "background-Color:gray; border:none";
+  todoBtn2.style = "  border:none";
   todoDiv.appendChild(todoBtn2);
   todoDiv.setAttribute('id',idCount)
   // Show TODO list append
@@ -100,18 +100,18 @@ function renderTodos(todos) {
     // result.value = "";
 
     // Check Button
-    var todoBtn1 = document.createElement("button");
+    var todoBtn1 = document.createElement("span");
     todoBtn1.innerHTML = '<input type="checkbox" name="">';
-    todoBtn1.style = "background-Color:gray; border:none";
+    todoBtn1.style = "border:none";
     todoBtn1.classList.add("check-Btn");
     todoDiv.appendChild(todoBtn1);
 
     // Delete Button
-    var todoBtn2 = document.createElement("button");
+    var todoBtn2 = document.createElement("span");
     todoBtn2.setAttribute("onclick", "abc(event);");
     todoBtn2.innerHTML = '<i class="fa fa-trash-o" style="font-size:20px"></i>';
     todoBtn2.classList.add("deletBtn");
-    todoBtn2.style = "background-Color:gray; border:none";
+    todoBtn2.style = "  border:none";
     todoDiv.appendChild(todoBtn2);
   });
 }

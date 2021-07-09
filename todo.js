@@ -102,7 +102,6 @@ function renderTodos(todos) {
     // Check Button
     var todoBtn1 = document.createElement("span");
     todoBtn1.innerHTML = '<input type="checkbox" name="">';
-    todoBtn1.style = "border:none";
     todoBtn1.classList.add("check-Btn");
     todoDiv.appendChild(todoBtn1);
 

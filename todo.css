@@ -157,7 +157,7 @@ height: 40px;
   white-space: nowrap;
 }
 .deletBtn{
-  color: orange;
+  color: rgb(255, 0, 0);
 cursor: pointer;
 }
 #toast #img{

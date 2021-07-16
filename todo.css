@@ -3,7 +3,7 @@ html {
   padding: 0;
 }
 body {
-  background-color:white;
+  background-color: white;
 }
 
 .boxs {
@@ -15,7 +15,7 @@ body {
   width: 320px;
   height: 520px;
   margin: 0 auto;
-  background-color:rgb(4, 7, 35);
+  background-color: rgb(4, 7, 35);
   box-shadow: 10px 10px 30px black;
   overflow: hidden;
   animation-name: shadow;
@@ -50,12 +50,9 @@ body {
   text-align: center;
   width: 100%;
   background-color: rgb(36, 140, 70);
-
-
 }
-#banner img{
-height: 40px;
-
+#banner img {
+  height: 40px;
 }
 
 #banner h2 {
@@ -75,7 +72,6 @@ height: 40px;
   border: none;
   padding: 8px;
   box-shadow: 60px 10px 20px black;
- 
 }
 
 #btn {
@@ -93,38 +89,49 @@ height: 40px;
 }
 
 #todocontainer {
-
   overflow: auto;
   height: 55%;
   color: white;
   font-size: 20px;
 }
-.todoList {
+.contents {
   padding: 1px 10px;
+}
 
-  
+#time {
+  display: none;
+
+  font-size: 14px;
+  text-align: center;
+  color: #e2ebe2;
+  transition: 0.9;
 }
 .todo-here {
   border: 2px solid black;
   margin: 0px 25px;
   padding: 1px;
-  display: flex;
-  justify-content: space-between;
+
   margin-bottom: 5px;
-  transition: 0.4s;
+
   background-color: white;
   color: black;
   border-radius: 5px;
-  
 }
-.todo-here:hover{
+.todo-here:hover #time {
+  display: block;
+  color: white;
+  background-color: rgb(4, 7, 35);
+}
+.todo-here:hover {
   background-color: rgb(36, 140, 70);
 }
+
 .todoList {
+  display: flex;
+  justify-content: space-between;
   list-style: none;
-  flex: 1;
+
   word-break: break-all;
-  
 }
 
 #container {
@@ -151,56 +158,51 @@ height: 40px;
 
   position: fixed;
   z-index: 1;
-  left: 0;right:0;
+  left: 0;
+  right: 0;
   bottom: 30px;
   font-size: 17px;
   white-space: nowrap;
 }
-.deletBtn{
-
+.deletBtn {
   color: rgb(255, 0, 0);
-cursor: pointer;
+  cursor: pointer;
 }
-.check-Btn{
-  border:none; 
-  padding-right:20px;
-  
+.check-Btn {
+  flex: 2;
+  border: none;
+  padding-right: 20px;
+}
+#toast #img {
+  width: 50px;
+  height: 50px;
 
-}
-#toast #img{
-width: 50px;
-height: 50px;
-  
   float: left;
-  
+
   padding-top: 16px;
   padding-bottom: 16px;
-  
+
   box-sizing: border-box;
 
-  
   background-color: #111;
   color: #fff;
 }
-#toast #desc{
-
-  
+#toast #desc {
   color: #fff;
- 
+
   padding: 16px;
-  
+
   overflow: hidden;
-white-space: nowrap;
+  white-space: nowrap;
 }
 
 #toast.show {
   visibility: visible;
-  -webkit-animation: fadein 0.5s, expand 0.5s 0.5s,stay 3s 1s, shrink 0.5s 2s, fadeout 0.5s 2.5s;
-  animation: fadein 0.5s, expand 0.5s 0.5s,stay 3s 1s, shrink 0.5s 4s, fadeout 0.5s 4.5s;
+  -webkit-animation: fadein 0.5s, expand 0.5s 0.5s, stay 3s 1s, shrink 0.5s 2s,
+    fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, expand 0.5s 0.5s, stay 3s 1s, shrink 0.5s 4s,
+    fadeout 0.5s 4.5s;
 }
-
-
-
 
 #toastdelete {
   visibility: hidden;
@@ -215,97 +217,142 @@ white-space: nowrap;
 
   position: fixed;
   z-index: 1;
-  left: 0;right:0;
+  left: 0;
+  right: 0;
   bottom: 30px;
   font-size: 17px;
   white-space: nowrap;
 }
-#toastdelete #img{
-width: 50px;
-height: 50px;
-  
+#toastdelete #img {
+  width: 50px;
+  height: 50px;
+
   float: left;
-  
+
   padding-top: 16px;
   padding-bottom: 16px;
-  
+
   box-sizing: border-box;
 
-  
   background-color: #111;
   color: #fff;
 }
-#toastdelete #desc{
-
-  
+#toastdelete #desc {
   color: #fff;
- 
+
   padding: 16px;
-  
+
   overflow: hidden;
-white-space: nowrap;
+  white-space: nowrap;
 }
 
 #toastdelete.show {
   visibility: visible;
-  -webkit-animation: fadein 0.5s, expand 0.5s 0.5s,stay 3s 1s, shrink 0.5s 2s, fadeout 0.5s 2.5s;
-  animation: fadein 0.5s, expand 0.5s 0.5s,stay 3s 1s, shrink 0.5s 4s, fadeout 0.5s 4.5s;
+  -webkit-animation: fadein 0.5s, expand 0.5s 0.5s, stay 3s 1s, shrink 0.5s 2s,
+    fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, expand 0.5s 0.5s, stay 3s 1s, shrink 0.5s 4s,
+    fadeout 0.5s 4.5s;
 }
 
-
-
 @-webkit-keyframes fadein {
-  from {bottom: 0; opacity: 0;} 
-  to {bottom: 30px; opacity: 1;}
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
 }
 
 @keyframes fadein {
-  from {bottom: 0; opacity: 0;}
-  to {bottom: 30px; opacity: 1;}
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
 }
 
 @-webkit-keyframes expand {
-  from {min-width: 50px} 
-  to {min-width: 350px}
+  from {
+    min-width: 50px;
+  }
+  to {
+    min-width: 350px;
+  }
 }
 
 @keyframes expand {
-  from {min-width: 50px}
-  to {min-width: 350px}
+  from {
+    min-width: 50px;
+  }
+  to {
+    min-width: 350px;
+  }
 }
 @-webkit-keyframes stay {
-  from {min-width: 350px} 
-  to {min-width: 350px}
+  from {
+    min-width: 350px;
+  }
+  to {
+    min-width: 350px;
+  }
 }
 
 @keyframes stay {
-  from {min-width: 350px}
-  to {min-width: 350px}
+  from {
+    min-width: 350px;
+  }
+  to {
+    min-width: 350px;
+  }
 }
 @-webkit-keyframes shrink {
-  from {min-width: 350px;} 
-  to {min-width: 50px;}
+  from {
+    min-width: 350px;
+  }
+  to {
+    min-width: 50px;
+  }
 }
 
 @keyframes shrink {
-  from {min-width: 350px;} 
-  to {min-width: 50px;}
+  from {
+    min-width: 350px;
+  }
+  to {
+    min-width: 50px;
+  }
 }
 
 @-webkit-keyframes fadeout {
-  from {bottom: 30px; opacity: 1;} 
-  to {bottom: 60px; opacity: 0;}
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 60px;
+    opacity: 0;
+  }
 }
 
 @keyframes fadeout {
-  from {bottom: 30px; opacity: 1;}
-  to {bottom: 60px; opacity: 0;}
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 60px;
+    opacity: 0;
+  }
 }
 
-
-#futterTxt{
+#futterTxt {
   color: white;
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-size: 13px;
   text-align: center;
   padding-top: 15px;
@@ -314,26 +361,25 @@ white-space: nowrap;
   animation-name: futer;
   animation-duration: 1s;
   animation-direction: alternate;
-  animation-iteration-count: 6
+  animation-iteration-count: 6;
 }
-@keyframes futer{
-0%{
-  padding-top: 1px;
+@keyframes futer {
+  0% {
+    padding-top: 1px;
+  }
+  20% {
+    padding-top: 5px;
+  }
+  30% {
+    padding-top: 10px;
+  }
+  40% {
+    padding-top: 15px;
+  }
+  50% {
+    padding-top: 20px;
+  }
+  60% {
+    padding-top: 50px;
+  }
 }
-20%{
-  padding-top: 5px;
-}
-30%{
-  padding-top: 10px;
-}
-40%{
-  padding-top: 15px;
-}
-50%{
-  padding-top:20px;
-}
-60%{
-  padding-top: 50px;
-}
-}
-
